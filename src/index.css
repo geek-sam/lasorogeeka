@@ -1,0 +1,367 @@
+/* =========================================
+   LA SOROGEEKA
+   LUXURY INTERIOR DESIGN SYSTEM
+   ========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+/* 01. ROOT VARIABLES */
+
+:root {
+  /* -------------------------------------
+     COLOR PALETTE
+  ------------------------------------- */
+
+  /* Primary Brand */
+  --color-primary: #5b0124;
+  --color-primary-dark: #3d0018;
+  --color-primary-light: #7a2948;
+
+  /* Warm Neutrals */
+  --color-ivory: #f8f5f0;
+  --color-cream: #f4efe8;
+  --color-warm-white: #fffcf8;
+  --color-champagne: #ede3d7;
+  --color-beige: #e2d5c6;
+  --color-sand: #d1c0ad;
+  --color-taupe: #b5a392;
+  --color-stone: #998777;
+
+  /* Dark Tones */
+  --color-charcoal: #282321;
+  --color-dark-brown: #332c29;
+  --color-espresso: #403630;
+  --color-warm-gray: #655a53;
+
+  /* Text */
+  --color-text-primary: #282321;
+  --color-text-secondary: #655a53;
+  --color-text-muted: #998777;
+  --color-text-inverse: #f8f5f0;
+  --color-text-brand: #5b0124;
+
+  /* Backgrounds */
+  --color-bg-primary: #f8f5f0;
+  --color-bg-secondary: #f4efe8;
+  --color-bg-tertiary: #ede3d7;
+  --color-bg-card: #fffcf8;
+  --color-bg-dark: #282321;
+  --color-bg-dark-secondary: #332c29;
+  --color-bg-brand: #5b0124;
+
+  /* Borders */
+  --color-border: #d7c9ba;
+  --color-border-light: #e9e0d6;
+  --color-border-dark: #50443d;
+  --color-border-brand: rgba(91, 1, 36, 0.22);
+
+  /* Accent Variations */
+  --color-accent: #9b7956;
+  --color-accent-light: #b49a76;
+  --color-accent-dark: #795b3d;
+  --color-accent-soft: #ede3d7;
+
+  /* Burgundy Variations */
+  --color-burgundy: #5b0124;
+  --color-burgundy-dark: #3d0018;
+  --color-burgundy-light: #7a2948;
+  --color-burgundy-muted: #a66b7e;
+  --color-burgundy-soft: #f0e4e8;
+
+  /* Functional Colors */
+  --color-success: #54765d;
+  --color-error: #a94e42;
+  --color-warning: #b68a48;
+
+  /* -------------------------------------
+     TYPOGRAPHY
+  ------------------------------------- */
+
+  --font-display: "Cormorant Garamond", Georgia, serif !important;
+  --font-body: "Manrope", Arial, sans-serif;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.75rem;
+  --text-5xl: 3.5rem;
+  --text-6xl: 4.5rem;
+  --text-7xl: 6rem;
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line Heights */
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+  --leading-loose: 1.9;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.04em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;
+  --tracking-widest: 0.2em;
+
+  /* -------------------------------------
+     SPACING SYSTEM
+     Base Unit: 4px
+  ------------------------------------- */
+
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+
+  /* Section Spacing */
+  --section-space-sm: 4rem;
+  --section-space-md: 6rem;
+  --section-space-lg: 8rem;
+  --section-space-xl: 10rem;
+
+  /* -------------------------------------
+     LAYOUT
+  ------------------------------------- */
+
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
+  --container-2xl: 1440px;
+
+  --container-width: 1440px;
+
+  --page-gutter: 5%;
+  --header-height: 90px;
+
+  /* Grid */
+  --grid-columns: 12;
+  --grid-gap: 24px;
+
+  /* -------------------------------------
+     BORDER RADIUS
+  ------------------------------------- */
+
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* -------------------------------------
+     BORDERS
+  ------------------------------------- */
+
+  --border-width: 1px;
+  --border-solid: 1px solid var(--color-border);
+  --border-light: 1px solid var(--color-border-light);
+  --border-dark: 1px solid var(--color-border-dark);
+
+  /* -------------------------------------
+     SHADOWS
+  ------------------------------------- */
+
+  --shadow-sm: 0 2px 8px rgba(40, 35, 33, 0.04);
+  --shadow-md: 0 8px 24px rgba(40, 35, 33, 0.08);
+  --shadow-lg: 0 16px 48px rgba(40, 35, 33, 0.12);
+
+  --shadow-overlay: 0 0 0 100vmax rgba(40, 35, 33, 0.35);
+
+  /* -------------------------------------
+     TRANSITIONS & ANIMATIONS
+  ------------------------------------- */
+
+  --ease-default: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-luxury: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 700ms;
+  --duration-reveal: 1000ms;
+
+  --transition-fast: all var(--duration-fast) var(--ease-default);
+  --transition-normal: all var(--duration-normal) var(--ease-smooth);
+  --transition-slow: all var(--duration-slow) var(--ease-luxury);
+
+  /* -------------------------------------
+     Z-INDEX
+  ------------------------------------- */
+
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-header: 30;
+  --z-overlay: 40;
+  --z-modal: 50;
+  --z-cursor: 60;
+
+  /* -------------------------------------
+     IMAGE RATIOS
+  ------------------------------------- */
+
+  --ratio-square: 1 / 1;
+  --ratio-landscape: 4 / 3;
+  --ratio-wide: 16 / 9;
+  --ratio-portrait: 3 / 4;
+  --ratio-editorial: 4 / 5;
+}
+
+/* =========================================
+   02. GLOBAL RESET
+   ========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* =========================================
+   SERVICE IMAGE TRANSITION
+========================================= */
+
+@keyframes serviceImageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(1.06);
+    filter: blur(3px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes serviceProgress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   RECOGNITION MARQUEE
+========================================= */
+@keyframes recognitionMarquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[recognitionMarquee_35s_linear_infinite\] {
+    animation: none;
+  }
+}
+
+/* ABOUT HERO GALLERY */
+
+.about-gallery-track {
+  will-change: transform;
+}
+
+.about-gallery-item {
+  height: clamp(340px, 32vw, 460px);
+  flex: 0 0 auto;
+}
+
+/* Individual image proportions */
+.about-image-one {
+  width: clamp(260px, 24vw, 360px);
+}
+
+.about-image-two {
+  width: clamp(260px, 24vw, 360px);
+}
+
+.about-image-three {
+  width: clamp(260px, 24vw, 360px);
+}
+
+.about-image-four {
+  width: clamp(260px, 24vw, 360px);
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+  .about-gallery-track {
+    width: 100%;
+    transform: none !important;
+  }
+
+  .about-gallery-item {
+    width: 100%;
+    height: 380px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .about-gallery-track,
+  .about-gallery-item img {
+    transition: none !important;
+  }
+}
