@@ -3,6 +3,7 @@ import Introduction from "../components/sections/home/Introduction";
 import Recognition from "../components/sections/home/Recognition";
 import Services from "../components/sections/common/Services";
 import FAQ from "../components/sections/common/FAQ";
+import FeaturedProjects from "../components/sections/home/FeaturedProjects";
 
 const Homepage: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Homepage: React.FC = () => {
       <Hero />
       <Introduction />
       <Services />
+      <FeaturedProjects />
       <Recognition />
       <FAQ />
     </>

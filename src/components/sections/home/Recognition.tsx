@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { awards, publications } from "../../../data/dataConfig";
+import Eyebrow from "../../Eyebrow";
 
 // const publications = [
 //   { name: "DESIGN JOURNAL", subtitle: "Architecture & Interiors" },
@@ -45,32 +46,13 @@ const Recognition = () => {
         >
           <div className="max-w-2xl">
             {/* EYEBROW */}
-            <div className="mb-7 flex items-center gap-4">
-              <span
-                className="
-                h-px w-5
-                bg-[var(--color-primary)]
-              "
-              />
-
-              <span
-                className="
-                font-[var(--font-body)]
-                text-[var(--text-xs)]
-                font-[var(--weight-medium)]
-                uppercase tracking-[var(--tracking-widest)]
-                text-[var(--color-primary)]
-              "
-              >
-                Awards and recognitions
-              </span>
-            </div>
+            <Eyebrow text="Awards and recognitions" variant="home" />
 
             {/* HEADING */}
             <h2
               className="
               font-[var(--font-display)]
-              text-[clamp(3rem,5.5vw,5.5rem)]
+              text-[clamp(3rem,5.5vw,4.5rem)]
               font-[var(--weight-regular)]
               leading-[0.95]
               tracking-[var(--tracking-tight)]
@@ -78,7 +60,6 @@ const Recognition = () => {
             "
             >
               Excellence,
-              <br />
               <span
                 className="
                 text-[var(--color-primary)]

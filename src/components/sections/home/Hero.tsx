@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Eyebrow from "../../Eyebrow";
 
 interface HeroProps {
   videoSrc?: string;
@@ -89,26 +90,7 @@ const Hero = ({
       >
         <div className="max-w-4xl">
           {/* EYEBROW */}
-          <div
-            className="
-              mb-8 flex items-center gap-4
-              animate-[heroReveal_1s_var(--ease-smooth)_both]
-            "
-          >
-            <span className="h-px w-5 bg-[var(--color-accent-light)]" />
-
-            <span
-              className="
-                font-[var(--font-body)]
-                text-[10px] font-[var(--weight-medium)]
-                uppercase tracking-[var(--tracking-widest)]
-                text-[var(--color-accent-light)]
-                sm:text-xs
-              "
-            >
-              La Sorogeeka Interiors
-            </span>
-          </div>
+          <Eyebrow text="La Sorogeeka Interiors" variant="hero" />
 
           {/* MAIN HEADING */}
           <h1

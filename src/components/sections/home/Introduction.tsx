@@ -1,3 +1,5 @@
+import Eyebrow from "../../Eyebrow";
+
 const metrics = [
   {
     value: "38+",
@@ -49,26 +51,7 @@ const Introduction = () => {
           {/* LEFT: CONTENT */}
           <div className="flex flex-col items-start">
             {/* EYEBROW */}
-            <div className="mb-7 flex items-center gap-4">
-              <span
-                className="
-                h-px w-5
-                bg-[var(--color-primary)]
-              "
-              />
-
-              <span
-                className="
-                font-[var(--font-body)]
-                text-[var(--text-xs)]
-                font-[var(--weight-medium)]
-                uppercase tracking-[var(--tracking-widest)]
-                text-[var(--color-primary)]
-              "
-              >
-                Our Legacy
-              </span>
-            </div>
+            <Eyebrow text="Our Legacy" variant="introduction" />
 
             {/* HEADING */}
             <h2
@@ -195,8 +178,8 @@ const Introduction = () => {
 
               <span
                 className="
-                font-[var(--font-display)]
-                text-lg italic
+                font-[var(--font-body)]
+                text-sm 
                 text-[var(--color-primary)]
               "
               >

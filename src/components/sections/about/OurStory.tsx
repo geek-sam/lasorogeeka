@@ -1,3 +1,5 @@
+import Eyebrow from "../../Eyebrow";
+
 const storyParagraphs = [
   "At LSI, we design and build some of the finest homes in the world — spaces defined by craftsmanship, precision, and timeless luxury.",
 
@@ -18,10 +20,8 @@ export default function OurStory() {
         {/* Section introduction */}
         <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <span className="mb-5 flex items-center gap-3 font-[var(--font-body)] text-xs uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
-              <span className="h-px w-7 bg-[var(--color-primary)]" />
-              The LSI Philosophy
-            </span>
+            {/* Eyebrow */}
+            <Eyebrow text="The LSI Philosophy" variant="other" />
 
             <h2 className="max-w-3xl font-[var(--font-display)] text-[clamp(3rem,5.5vw,4.5rem)] leading-[0.98] tracking-[-0.04em] text-[var(--color-text-primary)]">
               A legacy built on

@@ -279,7 +279,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <a
+          {/* <a
             href="/contact"
             onClick={closeMenu}
             tabIndex={isMenuOpen ? 0 : -1}
@@ -298,7 +298,7 @@ const Navbar = () => {
           >
             <span>Start a Conversation</span>
             <span className="text-lg">↗</span>
-          </a>
+          </a> */}
 
           <p
             className="

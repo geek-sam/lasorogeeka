@@ -1,3 +1,5 @@
+import Eyebrow from "../../Eyebrow";
+
 const services = [
   {
     number: "01",
@@ -60,26 +62,7 @@ const Services = () => {
         >
           <div className="max-w-2xl">
             {/* EYEBROW */}
-            <div className="mb-7 flex items-center gap-4">
-              <span
-                className="
-                h-px w-5
-                bg-[var(--color-primary)]
-              "
-              />
-
-              <span
-                className="
-                font-[var(--font-body)]
-                text-[var(--text-xs)]
-                font-[var(--weight-medium)]
-                uppercase tracking-[var(--tracking-widest)]
-                text-[var(--color-primary)]
-              "
-              >
-                What We Do
-              </span>
-            </div>
+            <Eyebrow text="Our Services" variant="services" />
 
             {/* HEADING */}
             <h2

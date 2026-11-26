@@ -1,107 +1,99 @@
+import Eyebrow from "../../Eyebrow";
+
 const teamColumns = [
-  [
-    {
-      name: "Ujjwal Goel",
-      designation: "Managing Director",
-      image: "/images/team/ujjwal-goel.jpg",
-      height: "tall",
-    },
-    {
-      name: "Bhavana Gupta",
-      designation: "General Manager - Marketing & Client Experience",
-      image: "/images/team/bhavana-gupta.jpg",
-      height: "medium",
-    },
-    {
-      name: "Tarun Duggal",
-      designation: "Assistant Manager - Design and Engineering",
-      image: "/images/team/tarun-duggal.jpg",
-      height: "medium",
-    },
-    {
-      name: "Sadiq Abuagla",
-      designation: "General Manager - Sales & Business Development",
-      image: "/images/team/sadiq-abuagla.jpg",
-      height: "medium",
-    },
-    {
-      name: "Momin Hamid",
-      designation: "Deputy General Manager - Project Management",
-      image: "/images/team/momin-hamid.jpg",
-      height: "tall",
-    },
-    {
-      name: "Evanshu Arora",
-      designation: "General Manager - Operations",
-      image: "/images/team/evanshu-arora.jpg",
-      height: "tall",
-    },
-  ],
-  [
-    {
-      name: "Miryam Goel",
-      designation: "Director Management",
-      image: "/images/team/miryam-goel.jpg",
-      height: "medium",
-    },
-    {
-      name: "Gaurav Ralangi",
-      designation: "General Manager - HR & Admin",
-      image: "/images/team/gaurav-ralangi.jpg",
-      height: "tall",
-    },
-    {
-      name: "Varun Gupta",
-      designation: "Deputy General Manager - Finance & Accounts",
-      image: "/images/team/varun-gupta.jpg",
-      height: "tall",
-    },
-    {
-      name: "Alysson Mesina",
-      designation: "Manager - Design & Engineering",
-      image: "/images/team/alysson-mesina.jpg",
-      height: "tall",
-    },
-    {
-      name: "Ashok Chakravarthy",
-      designation: "General Manager - Project Management",
-      image: "/images/team/ashok-chakravarthy.jpg",
-      height: "medium",
-    },
-  ],
-  [
-    {
-      name: "Tawfiq Zakama",
-      designation: "General Manager - Commercial",
-      image: "/images/team/tawfiq-zakama.jpg",
-      height: "tall",
-    },
-    {
-      name: "George Hanna Saloum",
-      designation: "Deputy General Manager - Project Management",
-      image: "/images/team/george-hanna-saloum.jpg",
-      height: "tall",
-    },
-    {
-      name: "R. Sayee Srinivasan",
-      designation: "Deputy General Manager - Finance & Accounts",
-      image: "/images/team/sayee-srinivasan.jpg",
-      height: "tall",
-    },
-    {
-      name: "Hammad Asheek",
-      designation: "Assistant Manager - Design & Engineering",
-      image: "/images/team/hammad-asheek.jpg",
-      height: "tall",
-    },
-  ],
+  {
+    name: "Ujjwal Goel",
+    designation: "Managing Director",
+    image: "/images/team/ujjwal-goel.png",
+    height: "tall",
+  },
+  {
+    name: "Bhavana Gupta",
+    designation: "General Manager - Marketing & Client Experience",
+    image: "/images/team/bhavana-gupta.png",
+    height: "medium",
+  },
+  {
+    name: "Tarun Duggal",
+    designation: "Assistant Manager - Design and Engineering",
+    image: "/images/team/tarun-duggal.png",
+    height: "medium",
+  },
+  {
+    name: "Sadig Abuagla",
+    designation: "General Manager - Sales & Business Development",
+    image: "/images/team/sadig-abuagla.png",
+    height: "medium",
+  },
+  {
+    name: "Momin Hamid",
+    designation: "Deputy General Manager - Project Management",
+    image: "/images/team/momin-hamid.png",
+    height: "tall",
+  },
+  {
+    name: "Evanshu Arora",
+    designation: "General Manager - Operations",
+    image: "/images/team/evanshu-arora.png",
+    height: "tall",
+  },
+  {
+    name: "Miryam Goel",
+    designation: "Director Management",
+    image: "/images/team/miryam-goel.png",
+    height: "medium",
+  },
+  {
+    name: "Gaurav Rohatgi",
+    designation: "General Manager - HR & Admin",
+    image: "/images/team/gaurav-rohatgi.png",
+    height: "tall",
+  },
+  {
+    name: "Varun Gupta",
+    designation: "Deputy General Manager - Finance & Accounts",
+    image: "/images/team/varun-gupta.png",
+    height: "tall",
+  },
+  {
+    name: "Alysson Mesina",
+    designation: "Manager - Design & Engineering",
+    image: "/images/team/alysson-mesina.png",
+    height: "tall",
+  },
+  {
+    name: "Ashok Chakravarthy",
+    designation: "General Manager - Project Management",
+    image: "/images/team/ashok-chakravarthy.png",
+    height: "medium",
+  },
+  {
+    name: "Tawfiq Zakarna",
+    designation: "General Manager - Commercial",
+    image: "/images/team/tawfiq-zakarna.png",
+    height: "tall",
+  },
+  {
+    name: "George Hanna Saloum",
+    designation: "Deputy General Manager - Project Management",
+    image: "/images/team/george-hanna-saloum.png",
+    height: "tall",
+  },
+  {
+    name: "R. Sayee Srinivasan",
+    designation: "Deputy General Manager - Finance & Accounts",
+    image: "/images/team/sayee-srinivasan.png",
+    height: "tall",
+  },
+  {
+    name: "Muhammad Asheek",
+    designation: "Assistant Manager - Design & Engineering",
+    image: "/images/team/muhammad-asheek.png",
+    height: "tall",
+  },
 ];
 
-const TeamCard = ({
-  member,
-}: {
-  member: (typeof teamColumns)[number][number];
-}) => {
+const TeamCard = ({ member }: { member: (typeof teamColumns)[number] }) => {
   return (
     <article className="team-card group relative aspect-[4/5] overflow-hidden bg-[var(--color-charcoal)]">
       <img
@@ -138,12 +130,10 @@ export default function Team() {
         {/* Section heading */}
         <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <span className="mb-5 flex items-center gap-3 font-[var(--font-body)] text-xs uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
-              <span className="h-px w-7 bg-[var(--color-primary)]" />
-              The People Behind LSI
-            </span>
+            {/* Eyebrow */}
+            <Eyebrow text="The People Behind LSI" variant="other" />
 
-            <h2 className="font-[var(--font-display)] text-[clamp(3rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.04em] text-[var(--color-text-primary)]">
+            <h2 className="font-[var(--font-display)] text-[clamp(3rem,5.5vw,4.5rem)] leading-[0.98] tracking-[-0.04em] text-[var(--color-text-primary)]">
               Our
               <span className="text-[var(--color-primary)]"> team.</span>
             </h2>

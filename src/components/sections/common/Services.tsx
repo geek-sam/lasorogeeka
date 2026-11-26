@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { services } from "../../../data/dataConfig";
+import Eyebrow from "../../Eyebrow";
 
 const Services = () => {
   const [activeService, setActiveService] = useState("01");
@@ -63,26 +64,7 @@ const Services = () => {
         >
           <div className="max-w-2xl">
             {/* EYEBROW */}
-            <div className="mb-7 flex items-center gap-4">
-              <span
-                className="
-                h-px w-5
-                bg-[var(--color-primary)]
-              "
-              />
-
-              <span
-                className="
-                font-[var(--font-body)]
-                text-[var(--text-xs)]
-                font-[var(--weight-medium)]
-                uppercase tracking-[var(--tracking-widest)]
-                text-[var(--color-primary)]
-              "
-              >
-                Our Services
-              </span>
-            </div>
+            <Eyebrow text="Our Services" variant="services" />
             {/* HEADING */}
 
             <h2
@@ -95,7 +77,7 @@ const Services = () => {
               text-[var(--color-text-primary)]
             "
             >
-              What We <br />
+              What We{" "}
               <span
                 className="
                 text-[var(--color-primary)]

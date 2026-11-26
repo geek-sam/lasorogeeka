@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Eyebrow from "../../Eyebrow";
 
 const faqs = [
   {
@@ -47,10 +48,19 @@ export default function FAQ() {
       className="bg-[var(--color-bg-primary)] py-[var(--section-space-lg)]"
     >
       <div className="mx-auto max-w-[var(--container-width)] px-[var(--page-gutter)]">
+        {/* EYEBROW */}
+        <Eyebrow text="FAQ" variant="common" />
         {/* Section heading */}
         <div className="border-b border-[var(--color-border)] pb-7 md:pb-8">
           <h2 className="font-[var(--font-display)] text-[clamp(3rem,5.5vw,4.5rem)] leading-[1.05] tracking-[-0.04em] text-[var(--color-text-primary)]">
-            Questions worth asking
+            Questions{" "}
+            <span
+              className="
+                text-[var(--color-primary)]
+              "
+            >
+              worth asking
+            </span>
           </h2>
         </div>
 

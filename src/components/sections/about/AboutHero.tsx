@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Eyebrow from "../../Eyebrow";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,10 +128,8 @@ export default function AboutHero() {
         {/* Heading and description */}
         <div className="grid grid-cols-1 gap-8 pb-10 md:grid-cols-12 md:items-end md:pb-8">
           <div className="md:col-span-8">
-            <span className="mb-3 block font-[var(--font-body)] text-xs tracking-wide text-[var(--color-text-muted)]">
-              <span className="mr-2 text-[var(--color-primary)]">•</span>
-              La Sorogeeka Interiors
-            </span>
+            {/* Eyebrow */}
+            <Eyebrow text="La Sorogeeka Interiors" variant="other" />
 
             <h1 className="font-[var(--font-display)] text-[clamp(3rem,5.5vw,4.5rem)] leading-[0.95] tracking-[-0.045em] text-[var(--color-text-primary)]">
               The Studio Behind

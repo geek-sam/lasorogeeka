@@ -5,6 +5,11 @@ const footerLinks = [
   { label: "Contact us", href: "/contact" },
 ];
 
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms" },
+];
+
 const socialLinks = [
   {
     label: "Instagram",
@@ -56,7 +61,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)]">
+    <footer className="bg-[var(--color-bg-brand)] text-[var(--color-text-inverse)]">
       <div className="mx-auto max-w-[var(--container-width)] px-[var(--page-gutter)]">
         {/* Main footer */}
         <div className="grid grid-cols-1 gap-10 py-12 md:grid-cols-2 md:items-end md:py-16">
@@ -66,18 +71,20 @@ export default function Footer() {
               <img
                 src="/images/logo.png"
                 alt="La Sorogeeka Interiors"
-                className="h-12 w-auto object-contain"
+                className="h-12 w-auto object-contain brightness-0 invert"
               />
             </a>
 
-            <address className="mt-7 max-w-xs not-italic font-[var(--font-body)] text-sm leading-[1.65] text-[var(--color-text-secondary)]">
-              <span>La Sorogeeka Interiors</span>
+            <address className="mt-7 max-w-xs not-italic font-[var(--font-body)] text-sm leading-[1.8] text-[var(--color-champagne)]">
+              <span className="text-[var(--color-text-inverse)]">
+                La Sorogeeka Interiors
+              </span>
               <br />
               <span>Dubai, UAE</span>
               <br />
               <a
                 href="mailto:info@lasorogeeka.com"
-                className="transition-colors duration-300 hover:text-[var(--color-primary)]"
+                className="transition-colors duration-300 hover:text-[var(--color-accent-light)]"
               >
                 info@lasorogeeka.com
               </a>
@@ -86,21 +93,23 @@ export default function Footer() {
 
           {/* Social and navigation */}
           <div className="flex flex-col items-start gap-10 md:items-end">
+            {/* Social links */}
             <div className="flex items-center gap-5">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="h-5 w-5 text-[var(--color-text-secondary)] transition-colors duration-300 hover:text-[var(--color-primary)]"
+                  className="h-5 w-5 text-[var(--color-champagne)] transition-colors duration-300 hover:text-[var(--color-text-inverse)]"
                 >
                   {social.icon}
                 </a>
               ))}
             </div>
 
+            {/* Navigation */}
             <nav
               aria-label="Footer navigation"
               className="flex flex-wrap gap-x-7 gap-y-4 md:gap-x-8"
@@ -109,7 +118,7 @@ export default function Footer() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="font-[var(--font-body)] text-sm text-[var(--color-text-primary)] transition-colors duration-300 hover:text-[var(--color-primary)]"
+                  className="font-[var(--font-body)] text-sm text-[var(--color-text-inverse)] transition-colors duration-300 hover:text-[var(--color-accent-light)]"
                 >
                   {link.label}
                 </a>
@@ -119,15 +128,28 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col gap-4 border-t border-[var(--color-border)] py-7 font-[var(--font-body)] text-xs text-[var(--color-text-secondary)] sm:flex-row sm:items-center sm:justify-between sm:text-sm">
+        <div className="flex flex-col gap-4 border-t border-[var(--color-text-inverse)]/20 py-7 font-[var(--font-body)] text-xs text-[var(--color-champagne)] sm:flex-row sm:items-center sm:justify-between sm:text-sm">
           <p>
             © {new Date().getFullYear()} La Sorogeeka Interiors. All rights
             reserved.
           </p>
 
+          {/* Legal links */}
+          <div className="flex items-center gap-5">
+            {legalLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-[var(--font-body)] text-sm text-[var(--color-text-inverse)] transition-colors duration-300 hover:text-[var(--color-accent-light)]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
           <a
             href="/"
-            className="transition-colors duration-300 hover:text-[var(--color-primary)]"
+            className="transition-colors duration-300 hover:text-[var(--color-text-inverse)]"
           >
             Designed with intention.
           </a>
